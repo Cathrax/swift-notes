@@ -243,9 +243,9 @@ var detailItem: AnyObject? {
 }
 ```
 
-delete “self.”
+delete `self.`
 
-change “AnyObject?” to “String?” and press Cmd+B
+change `AnyObject?` to `String?` and press Cmd+B
 
 
 
@@ -262,19 +262,15 @@ if let detail: AnyObject = self.detailItem {
 ```
 
 
-
-
 replace with
 
+```swift
 if let detail = self.detailItem {
-
     if let imageView = self.detailImageView {
-
         imageView.image = UIImage(named: detail)
-
     }
-
 }
+```
 
 Line 43 - look for in MasterViewController.swift inside prepareForSeque() method Line 46
 
