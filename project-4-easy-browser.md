@@ -16,7 +16,7 @@ then:
 open `ViewController.swift`
 
 line 13 - add
-```
+```swift
 override func loadView() {
     webView = WKWebView()
     webView.navigationDelegate = self
@@ -25,30 +25,37 @@ override func loadView() {
 ```
 
 line 10 - add
-```
+```swift
 import WebKit
 ```
 
 line 14 - add
-```
+```swift
 var webView: WKWebView!
 ```
 
 line 12 - change to
-```
+```swift
 class ViewController: UIViewController, WKNavigationDelegate {
 ```
 
 line 24 - add
+```swift
 let url = NSURL(string: "http://www.slashdot.org")!
 webView.loadRequest(NSURLRequest(URL: url))
 webView.allowsBackForwardNavigationGestures = true
-Choosing a Website: UIAlertController
+```
+
+
+## Choosing a Website: UIAlertController
 
 line 27 - add
+```swift
 navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .Plain, target: self, action: "openTapped")
+```
 
 line 31 - add
+```swift
 func openTapped() {
     let ac = UIAlertController(title: "Open page…", message: nil, preferredStyle: .ActionSheet)
     ac.addAction(UIAlertAction(title: "apple.com", style: .Default, handler: openPage))
@@ -56,18 +63,22 @@ func openTapped() {
     ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
     presentViewController(ac, animated: true, completion: nil)
 }
+```
 
 line 39 - add
+```swift
 func openPage(action: UIAlertAction!) {
     let url = NSURL(string: "http://" + action.title)!
     webView.loadRequest(NSURLRequest(URL: url))
 }
+```
 
 line 44 - add
-
+```swift
 func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
     title = webView.title
 }
+```
 
 
 ## Monitoring page loads: UIToolbar and UIProgressView
