@@ -12,21 +12,21 @@ Hacking with Swift
 
 launch Xcode
 
-&nbsp; create new Project
+* create new Project
 
-&nbsp;&nbsp; choose MasterDetail App
+  * choose MasterDetail App
 
-&nbsp;&nbsp; click next
+  * click next
 
-&nbsp;&nbsp;&nbsp; name it “Project1”
+    * name it “Project1”
+    
+    * select Swift for language
+    
+    * select iPhone for devices
 
-&nbsp;&nbsp;&nbsp; select Swift for language
+    * Organization identifier is “com.example”
 
-&nbsp;&nbsp;&nbsp; select iPhone for devices
-
-&nbsp;&nbsp;&nbsp; Organization identifier is “com.example”
-
-&nbsp;&nbsp;&nbsp; uncheck “use core data”
+    * uncheck “use core data”
 
 next to the play button it says Project1 - to the right select “iPhone 5”
 
